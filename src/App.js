@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import ScoreBoard from './ScoreBoard'
+import { useState, useEffect } from 'react'
 
 function App() {
+
+  const [scoreBoard, setScoreBoard] = useState([])
+
+  useEffect(() => {
+    fetch('http://alexgz.de:8080/scoreboard').then(response => { return response.text() }).then((json) => {
+
+      console.log(json)
+      const data = JSON.parse(json)
+      if (data) {
+        setScoreBoard(data)
+      }
+    })
+  }, [])
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <ScoreBoard ScoreBoard={scoreBoard}></ScoreBoard>
+    </>
   );
 }
 
