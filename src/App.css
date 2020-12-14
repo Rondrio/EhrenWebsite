@@ -1,0 +1,69 @@
+body {
+    background-color: #36393e;
+}
+
+.header {
+    background-color: #36393e;
+    min-height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: #FFFFFF;
+}
+
+.name {
+    position: sticky;
+    float: left;
+    text-align: left;
+    top: 10px;
+    left: 10px;
+    width: 200px;
+    color: #969195;
+}
+
+.score {
+    position: sticky;
+    float: left;
+    text-align: left;
+    top: 10px;
+    left: 200px;
+    width: 200px;
+    color: #969195;
+}
+
+.nameHeader {
+    position: sticky;
+    float: left;
+    text-align: left;
+    top: 10px;
+    left: 10px;
+    width: 200px;
+    color: #969195;
+}
+
+.scoreHeader {
+    position: sticky;
+    float: left;
+    text-align: left;
+    top: 10px;
+    left: 200px;
+    width: 200px;
+    color: #969195;
+}
+
+th, td {
+    border-bottom: 1px solid #23272A;
+    padding: 8px;
+}
+
+tr:hover {
+    background-color: #23272A;
+}
+
+.addInfoContainer {
+    position: relative;
+    top: 40px;
+    left: 500px;
+    width: 500px;
+}
