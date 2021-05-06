@@ -3,15 +3,22 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@dicebear/avatars": "^4.6.3",
+    "@dicebear/avatars-gridy-sprites": "^4.6.3",
+    "@svgr/cli": "^5.5.0",
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.5.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-loader-spinner": "^4.0.0",
     "react-scripts": "4.0.1",
+    "react-svg": "^13.0.3",
+    "styled-components": "^5.3.0",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
+    "svgr": "svgr -d src/assets/svgr src/assets/generated",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
